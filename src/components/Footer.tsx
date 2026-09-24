@@ -1,4 +1,4 @@
-import { Eye, MessageCircle } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 import { navItems, getWhatsAppLink, siteConfig } from '@/config/site';
 import { useRouter } from '@/context/RouterContext';
 
@@ -10,11 +10,14 @@ export default function Footer() {
       <div className="container-editorial py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <span className="flex items-center justify-center w-9 h-9 rounded-lg bg-primary-700 text-warm-50">
-                <Eye className="w-5 h-5" />
-              </span>
-              <span className="font-serif text-xl font-bold text-primary-800 dark:text-primary-200">Matamata</span>
+            <div className="mb-4">
+              <img
+                src="/web-app-manifest-512x512 copy.png"
+                alt="Matamata"
+                width="56"
+                height="56"
+                className="w-14 h-14 rounded-2xl object-cover"
+              />
             </div>
             <p className="text-sm text-warm-600 dark:text-warm-400 max-w-xs leading-relaxed">
               {siteConfig.description}

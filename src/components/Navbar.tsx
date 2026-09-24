@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Eye, Menu, X, MessageCircle, Moon, Sun } from 'lucide-react';
+import { Menu, X, MessageCircle, Moon, Sun } from 'lucide-react';
 import { navItems, getWhatsAppLink } from '@/config/site';
 import { useTheme } from '@/context/ThemeContext';
 import { useRouter } from '@/context/RouterContext';
@@ -68,13 +68,16 @@ export default function Navbar() {
           <a
             href="/"
             onClick={(e) => { e.preventDefault(); navigate('/'); }}
-            className="flex items-center gap-2 font-serif text-xl font-bold text-primary-800 dark:text-primary-200"
+            className="flex items-center"
             aria-label="Beranda Matamata"
           >
-            <span className="flex items-center justify-center w-9 h-9 rounded-lg bg-primary-700 text-warm-50">
-              <Eye className="w-5 h-5" />
-            </span>
-            <span>Matamata</span>
+            <img
+              src="/web-app-manifest-512x512 copy.png"
+              alt="Matamata"
+              width="44"
+              height="44"
+              className="w-11 h-11 rounded-xl object-cover"
+            />
           </a>
 
           <ul className="hidden lg:flex items-center gap-1">
