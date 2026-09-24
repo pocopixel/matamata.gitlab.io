@@ -376,6 +376,6 @@ Melacak anak di bawah umur oleh orang tua/wali umumnya diperbolehkan. Namun, mel
 ## Kesimpulan
  
 Memilih **jasa melacak posisi lokasi nomor dengan link tracker** yang tepat bergantung pada kebutuhan: verifikasi nomor bisnis cocok memakai layanan HLR/API, keamanan keluarga lebih pas dengan aplikasi seperti Life360 atau iSharing, sementara kebutuhan berbagi lokasi sesaat cukup memanfaatkan fitur bawaan Google Maps atau WhatsApp. Apa pun pilihannya, selalu utamakan persetujuan dan transparansi kepada pihak yang lokasinya dilacak.`,
-};
+},
  
 ];
