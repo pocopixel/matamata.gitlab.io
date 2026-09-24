@@ -1,8 +1,8 @@
 export const siteConfig = {
-  name: 'Matamata',
-  tagline: 'Digital Awareness & Responsible Monitoring',
+  name: 'MATAMATA',
+  tagline: 'Jasa Pengawas Aplikasi WhatsApp Jarak Jauh',
   description:
-    'Pahami kemampuan layanan monitoring perangkat FlexiSPY, persyaratan kompatibilitas, serta penggunaannya secara transparan dan bertanggung jawab.',
+    'Kenali kemampuan layanan monitoring WA Jarak Jauh, persyaratan kompatibilitas, serta penggunaannya secara transparan dan bertanggung jawab.',
   url: 'PUBLIC_SITE_URL',
   whatsapp: {
     enabled: true,
