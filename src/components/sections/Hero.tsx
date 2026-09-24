@@ -13,22 +13,22 @@ export default function Hero() {
 
       <div className="container-editorial grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="animate-slide-up">
-          <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary-100 dark:bg-secondary-900/40 text-secondary-700 dark:text-secondary-300 text-xs font-semibold tracking-wider uppercase">
+          <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary-100 dark:bg-secondary-900/40 text-secondary-700 dark:text-secondary-300 text-xs font-semibold tracking-wide">
             <Eye className="w-3.5 h-3.5" />
             Digital Awareness
           </span>
 
           <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-primary-900 dark:text-primary-100">
-            Pahami Informasi Perangkat dengan Lebih Terarah
+            Jasa Pemasangan Aplikasi Pengawas WhatsApp Anak Jarak Jauh
           </h1>
 
           <p className="mt-6 text-lg text-warm-600 dark:text-warm-400 leading-relaxed max-w-xl">
-            Kenali kemampuan layanan monitoring perangkat, persyaratan kompatibilitas, serta penggunaannya secara transparan dan bertanggung jawab.
+            Kenali kemampuan layanan monitoring WA Jarak Jauh, persyaratan kompatibilitas, serta penggunaannya secara transparan dan bertanggung jawab.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
             <a
-              href={getWhatsAppLink('Halo Matamata, saya ingin berkonsultasi tentang layanan monitoring perangkat.')}
+              href={getWhatsAppLink('Halo Matamata, saya ingin berkonsultasi tentang layanan monitoring WhatsApp jarak jauh.')}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold rounded-xl bg-success-600 hover:bg-success-700 text-white transition-all hover:shadow-lg"
@@ -38,7 +38,7 @@ export default function Hero() {
             </a>
             <button
               onClick={scrollToFeatures}
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold rounded-xl border-2 border-primary-200 dark:border-primary-700 text-primary-700 dark:text-primary-300 hover:bg-primary-50 dark:hover:bg-primary-900/30 transition-all"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold rounded-xl border-2 border-primary-200 dark:border-primary-700 text-primary-700 dark:text-primary-300 hover:bg-primary-50 dark:hover:bg-primary-900/30 transition-colors"
             >
               Pelajari Fitur
               <ArrowRight className="w-4 h-4" />
