@@ -7,9 +7,16 @@ interface InquiryEntry {
   message: string;
 }
 
-// Pertanyaan anonim berbasis topik layanan. Notifikasi ini tidak mengklaim berasal
-// dari pengguna tertentu atau menunjukkan aktivitas transaksi secara real-time.
-const inquiryContent: InquiryEntry[] = [
+interface CustomerSample {
+  name: string;
+  city: string;
+  phone: string;
+  email: string;
+  question: string;
+  time: string;
+}
+
+const generalQuestions: InquiryEntry[] = [
   { topic: 'Kompatibilitas perangkat', message: 'Apakah perangkat Android saya kompatibel?' },
   { topic: 'Kompatibilitas perangkat', message: 'Bagaimana cara mengecek kompatibilitas iPhone?' },
   { topic: 'WhatsApp', message: 'Fitur apa saja yang tersedia untuk WhatsApp?' },
@@ -62,15 +69,105 @@ const inquiryContent: InquiryEntry[] = [
   { topic: 'Verifikasi perangkat', message: 'Bisakah kompatibilitas perangkat saya diverifikasi terlebih dahulu?' },
 ];
 
+const cityList = [
+  'Jakarta', 'Bandung', 'Surabaya', 'Yogyakarta', 'Semarang', 'Medan', 'Makassar',
+  'Palembang', 'Bogor', 'Depok', 'Bekasi', 'Malang', 'Solo', 'Bali', 'Pekanbaru',
+  'Banjarmasin', 'Balikpapan', 'Cirebon', 'Pontianak', 'Banda Aceh', 'Denpasar',
+  'Padang', 'Samarinda', 'Mataram', 'Kupang', 'Ambon', 'Jayapura', 'Gorontalo',
+  'Manado', 'Tegal', 'Kediri', 'Blitar', 'Sukabumi', 'Tasikmalaya', 'Cimahi',
+  'Madiun', 'Kudus', 'Banyuwangi', 'Tangerang', 'Serang'
+];
+
+const firstNames = [
+  'Adit', 'Sari', 'Rian', 'Maya', 'Doni', 'Nina', 'Arif', 'Lina', 'Yoga', 'Putri',
+  'Bagus', 'Tika', 'Rizal', 'Dian', 'Hendra', 'Wulan', 'Bayu', 'Intan', 'Fikri',
+  'Citra', 'Agus', 'Novi', 'Raka', 'Elsa', 'Taufik', 'Vina', 'Yusuf', 'Rani', 'Ilham',
+  'Mega', 'Deni', 'Aulia', 'Gilang', 'Nanda', 'Wahyu', 'Fitri', 'Reza', 'Lilis', 'Dika',
+  'Mira', 'Rendy', 'Yuni', 'Fauzan', 'Nisa', 'Adnan', 'Riska', 'Arman', 'Salsa', 'Joko',
+  'Anisa', 'Robby', 'Dewi', 'Galih', 'Nadia', 'Eko', 'Desi', 'Rafi', 'Mila', 'Sandi',
+  'Aisyah', 'Damar', 'Niken', 'Iqbal', 'Yulia', 'Hafiz', 'Siska', 'Rangga', 'Tari',
+  'Fajar', 'Laras', 'Bima', 'Meylani', 'Rizky', 'Indah', 'Ari', 'Novianti', 'Daffa',
+  'Sinta', 'Rizwan', 'Mutiara', 'Andre', 'Rina', 'Fauzi', 'Vera', 'Dimas', 'Lukman',
+  'Ayu', 'Farhan', 'Novi', 'Rizal', 'Tiara', 'Yudha', 'Maya', 'Beni', 'Rara', 'Heri',
+  'Nanda', 'Fina', 'Rendi', 'Niken'
+];
+
+const questionTemplates = [
+  'Apakah perangkat saya kompatibel untuk fitur utama?',
+  'Bagaimana cara mengecek versi perangkat sebelum memilih paket?',
+  'Saya ingin tahu apakah aplikasi WhatsApp tersedia di perangkat saya.',
+  'Apakah fitur lokasi dan kompatibilitas perangkatnya bisa dicek dulu?',
+  'Bisakah saya bertanya soal paket dan pembiayaan sebelum order?',
+  'Apakah ada batasan fitur untuk perangkat iPhone atau Android?',
+  'Saya masih ragu apakah perangkat saya bisa digunakan untuk fitur ini.',
+  'Bagaimana cara memastikan akses perangkat masih sesuai ketentuan?',
+  'Apakah aplikasi Facebook dan Instagram masuk dalam fitur yang tersedia?',
+  'Saya mau cek apakah perangkat saya sudah memenuhi persyaratan layanan.',
+  'Apakah ada panduan yang bisa dijelaskan sebelum saya memilih paket?',
+  'Saya ingin menanyakan soal dukungan teknis dan aktivasi lebih lanjut.'
+];
+
+function maskName(name: string) {
+  if (!name) return 'Pelanggan';
+  const trimmed = name.trim();
+  if (trimmed.length <= 2) return `${trimmed[0] || 'P'}***`;
+  return `${trimmed.slice(0, 2)}${'*'.repeat(Math.max(3, trimmed.length - 2))}`;
+}
+
+function maskPhone(phone: string) {
+  const digits = phone.replace(/\D/g, '').slice(-9);
+  if (!digits) return '+62 8*** ****';
+  return `+62 8${'*'.repeat(4)} ${digits.slice(-4)}`;
+}
+
+function maskEmail(email: string) {
+  if (!email) return 'p***@gmail.com';
+  const [local, domain] = email.split('@');
+  if (!local || !domain) return 'p***@gmail.com';
+  const maskedLocal = `${local.slice(0, 1)}${'*'.repeat(Math.max(2, local.length - 1))}`;
+  return `${maskedLocal}@${domain}`;
+}
+
+function getRandomTime() {
+  const minutesAgo = Math.floor(Math.random() * 27) + 1;
+  if (minutesAgo < 5) return 'baru saja';
+  if (minutesAgo < 20) return `${minutesAgo} menit lalu`;
+  return `${minutesAgo} menit lalu`;
+}
+
+const customerSamples: CustomerSample[] = Array.from({ length: 50 }, (_, index) => {
+  const firstName = firstNames[(index * 7) % firstNames.length];
+  const city = cityList[(index * 11) % cityList.length];
+  const rawPhone = `08${String(Math.floor(100000000 + Math.random() * 900000000))}`;
+  const local = `${firstName.toLowerCase()}${String(index + 1)}`;
+  const domain = ['gmail.com', 'yahoo.com', 'outlook.com'][index % 3];
+
+  return {
+    name: maskName(firstName),
+    city,
+    phone: maskPhone(rawPhone),
+    email: maskEmail(`${local}@${domain}`),
+    question: questionTemplates[index % questionTemplates.length],
+    time: getRandomTime(),
+  };
+});
+
 function getRandomIndex(except?: number) {
-  if (inquiryContent.length < 2) return 0;
-  let next = Math.floor(Math.random() * inquiryContent.length);
-  while (next === except) next = Math.floor(Math.random() * inquiryContent.length);
-  return next;
+  const total = customerSamples.length + generalQuestions.length;
+  let index = Math.floor(Math.random() * total);
+
+  if (except !== undefined) {
+    while (index === except) {
+      index = Math.floor(Math.random() * total);
+    }
+  }
+
+  return index;
 }
 
 export default function SocialProofPopup() {
   const [visible, setVisible] = useState(false);
+  const [mode, setMode] = useState<'question' | 'customer'>('question');
   const [index, setIndex] = useState(() => getRandomIndex());
   const [dismissed, setDismissed] = useState(false);
 
@@ -80,27 +177,80 @@ export default function SocialProofPopup() {
     let cancelled = false;
     const timers: ReturnType<typeof setTimeout>[] = [];
 
-    const schedulePopup = () => {
+    const showQuestion = () => {
       if (cancelled) return;
-
+      setMode('question');
+      setIndex((prev) => {
+        let next = Math.floor(Math.random() * generalQuestions.length);
+        while (next === prev && generalQuestions.length > 1) {
+          next = Math.floor(Math.random() * generalQuestions.length);
+        }
+        return next;
+      });
       setVisible(true);
 
-      // Popup pertama dan setiap popup berikutnya tampil selama 10 detik.
-      timers.push(setTimeout(() => {
-        if (cancelled) return;
-        setVisible(false);
-
-        // Setelah ditutup, beri jeda 20 detik sebelum menampilkan pertanyaan berikutnya.
-        timers.push(setTimeout(() => {
+      timers.push(
+        setTimeout(() => {
           if (cancelled) return;
-          setIndex((previous) => getRandomIndex(previous));
-          schedulePopup();
-        }, 20000));
-      }, 10000));
+          setVisible(false);
+          const delay = 20000 + Math.random() * 15000;
+          timers.push(
+            setTimeout(() => {
+              if (cancelled) return;
+              setMode('customer');
+              setIndex((previous) => {
+                let next = Math.floor(Math.random() * customerSamples.length);
+                while (next === previous && customerSamples.length > 1) {
+                  next = Math.floor(Math.random() * customerSamples.length);
+                }
+                return next;
+              });
+              setVisible(true);
+            }, delay)
+          );
+        }, 10000)
+      );
     };
 
-    // Pertahankan perilaku popup pertama: tampil setelah 8 detik.
-    timers.push(setTimeout(schedulePopup, 8000));
+    const showCustomer = () => {
+      if (cancelled) return;
+      setMode('customer');
+      setIndex((prev) => {
+        let next = Math.floor(Math.random() * customerSamples.length);
+        while (next === prev && customerSamples.length > 1) {
+          next = Math.floor(Math.random() * customerSamples.length);
+        }
+        return next;
+      });
+      setVisible(true);
+
+      timers.push(
+        setTimeout(() => {
+          if (cancelled) return;
+          setVisible(false);
+          const delay = 20000 + Math.random() * 15000;
+          timers.push(
+            setTimeout(() => {
+              if (cancelled) return;
+              setMode('question');
+              setIndex((previous) => {
+                let next = Math.floor(Math.random() * generalQuestions.length);
+                while (next === previous && generalQuestions.length > 1) {
+                  next = Math.floor(Math.random() * generalQuestions.length);
+                }
+                return next;
+              });
+              setVisible(true);
+            }, delay)
+          );
+        }, 10000)
+      );
+    };
+
+    timers.push(setTimeout(() => {
+      if (cancelled) return;
+      showQuestion();
+    }, 8000));
 
     return () => {
       cancelled = true;
@@ -110,7 +260,8 @@ export default function SocialProofPopup() {
 
   if (dismissed || !siteConfig.socialProof.enabled) return null;
 
-  const inquiry = inquiryContent[index];
+  const question = generalQuestions[index] ?? generalQuestions[0];
+  const customer = customerSamples[index % customerSamples.length];
 
   return (
     <div
@@ -126,7 +277,9 @@ export default function SocialProofPopup() {
             <span className="flex items-center justify-center w-8 h-8 rounded-full bg-success-100 dark:bg-success-900/40">
               <MessageCircle className="w-4 h-4 text-success-600 dark:text-success-400" />
             </span>
-            <span className="text-xs font-semibold text-warm-800 dark:text-warm-200">Pertanyaan Umum</span>
+            <span className="text-xs font-semibold text-warm-800 dark:text-warm-200">
+              {mode === 'question' ? 'Pertanyaan Umum' : 'Pelanggan Baru'}
+            </span>
           </div>
           <button
             onClick={() => setDismissed(true)}
@@ -136,8 +289,22 @@ export default function SocialProofPopup() {
             <X className="w-4 h-4" />
           </button>
         </div>
-        <p className="text-xs text-secondary-600 dark:text-secondary-400 font-medium">{inquiry.topic}</p>
-        <p className="text-sm text-warm-600 dark:text-warm-400 mt-1">{inquiry.message}</p>
+
+        {mode === 'question' ? (
+          <>
+            <p className="text-xs text-secondary-600 dark:text-secondary-400 font-medium">{question.topic}</p>
+            <p className="text-sm text-warm-600 dark:text-warm-400 mt-1">{question.message}</p>
+          </>
+        ) : (
+          <>
+            <p className="text-sm text-warm-700 dark:text-warm-300 font-medium">{customer.name}</p>
+            <p className="text-xs text-warm-500 dark:text-warm-400 mb-1">{customer.city}</p>
+            <p className="text-xs text-warm-500 dark:text-warm-400">{customer.phone}</p>
+            <p className="text-xs text-warm-500 dark:text-warm-400">{customer.email}</p>
+            <p className="text-sm text-warm-600 dark:text-warm-400 mt-2">{customer.question}</p>
+            <p className="text-[11px] text-warm-400 dark:text-warm-500 mt-2">{customer.time}</p>
+          </>
+        )}
       </div>
     </div>
   );
