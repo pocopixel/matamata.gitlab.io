@@ -1,6 +1,7 @@
 import SEO from '@/components/SEO';
 import Hero from '@/components/sections/Hero';
 import EditorialInsight from '@/components/sections/EditorialInsight';
+import ProhibitedUse from '@/components/sections/ProhibitedUse';
 import Features from '@/components/sections/Features';
 import DeviceCompatibility from '@/components/sections/DeviceCompatibility';
 import ScreenshotShowcase from '@/components/sections/ScreenshotShowcase';
@@ -43,6 +44,7 @@ export default function HomePage() {
       />
       <Hero />
       <EditorialInsight />
+      <ProhibitedUse />
       <Features />
       <DeviceCompatibility />
       <ScreenshotShowcase />
