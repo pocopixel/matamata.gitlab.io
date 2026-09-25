@@ -44,13 +44,13 @@ export default function HomePage() {
       />
       <Hero />
       <EditorialInsight />
-      <ProhibitedUse />
       <Features />
       <DeviceCompatibility />
       <ScreenshotShowcase />
       <HowItWorks />
       <Pricing />
       <FAQ />
+      <ProhibitedUse />
       <FinalCTA />
     </>
   );
