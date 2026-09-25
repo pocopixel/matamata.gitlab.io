@@ -5,7 +5,7 @@ export const siteConfig = {
   url: 'PUBLIC_SITE_URL',
   whatsapp: { enabled: true, number: 'ISI_NOMOR_WHATSAPP' },
   analytics: { enabled: false, provider: 'google-analytics', measurementId: '' },
-  socialProof: { enabled: true, demoMode: true },
+  socialProof: { enabled: true },
 };
 
 export const navItems = [
