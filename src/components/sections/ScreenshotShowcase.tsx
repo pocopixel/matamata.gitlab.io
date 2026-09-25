@@ -1,10 +1,11 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { ChevronLeft, ChevronRight, Image as ImageIcon } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Slide {
   id: string;
   label: string;
   description: string;
+  image: string;
 }
 
 const slides: Slide[] = [
@@ -12,21 +13,31 @@ const slides: Slide[] = [
     id: 'slide-1',
     label: 'Dashboard Monitoring',
     description: 'Tampilan utama dashboard menampilkan ringkasan status perangkat dan aktivitas terbaru.',
+    image: '/images/dashboard/dashboard.png',
   },
   {
     id: 'slide-2',
-    label: 'Aktivitas Pesan',
-    description: 'Detail aktivitas pesan pada perangkat yang dimonitor dengan informasi yang tersimpan.',
+    label: 'Rekam Panggilan',
+    description: 'Tampilan riwayat dan rekaman panggilan yang tersedia pada perangkat yang dipantau.',
+    image: '/images/features/fitur-rekam-panggilan.png',
   },
   {
     id: 'slide-3',
-    label: 'Lokasi Perangkat',
-    description: 'Informasi lokasi perangkat berdasarkan data GPS dan jaringan yang tersedia.',
+    label: 'Aktivitas Browser',
+    description: 'Tampilan riwayat penjelajahan web yang tersimpan pada perangkat.',
+    image: '/images/features/fitur-sadap-browser.png',
   },
   {
     id: 'slide-4',
-    label: 'Log Panggilan',
-    description: 'Riwayat panggilan telepon yang tersimpan pada perangkat yang dimonitor.',
+    label: 'Galeri Perangkat',
+    description: 'Tampilan foto dan media yang tersedia dari perangkat yang dipantau.',
+    image: '/images/features/fitur-sadap-galeri.png',
+  },
+  {
+    id: 'slide-5',
+    label: 'Aktivitas WhatsApp',
+    description: 'Tampilan aktivitas WhatsApp yang tersedia berdasarkan perangkat dan izin yang sah.',
+    image: '/images/features/fitur-sadap-whatsapp.png',
   },
 ];
 
@@ -99,22 +110,21 @@ export default function ScreenshotShowcase() {
               <div className="absolute inset-0 animate-pulse bg-warm-200 dark:bg-warm-700" aria-hidden="true" />
             )}
 
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center px-8 max-w-md">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-secondary-100 dark:bg-secondary-900/30 text-secondary-600 dark:text-secondary-400 mb-4">
-                  <ImageIcon className="w-8 h-8" />
-                </div>
-                <h3 className="text-lg font-bold text-warm-800 dark:text-warm-200">{slides[current].label}</h3>
-                <p className="mt-2 text-sm text-warm-600 dark:text-warm-400">{slides[current].description}</p>
-              </div>
-            </div>
-
             <img
-              src={`data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"/>`)}`}
+              src={slides[current].image}
               alt={slides[current].label}
-              className="hidden"
+              className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-300 ${loaded[current] ? 'opacity-100' : 'opacity-0'}`}
               onLoad={() => setLoaded((prev) => ({ ...prev, [current]: true }))}
             />
+
+            {!loaded[current] && (
+              <div className="absolute inset-0 flex items-center justify-center px-8 text-center">
+                <div className="max-w-md">
+                  <h3 className="text-lg font-bold text-warm-800 dark:text-warm-200">{slides[current].label}</h3>
+                  <p className="mt-2 text-sm text-warm-600 dark:text-warm-400">{slides[current].description}</p>
+                </div>
+              </div>
+            )}
           </div>
 
           <button
