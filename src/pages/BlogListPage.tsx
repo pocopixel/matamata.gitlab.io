@@ -12,7 +12,7 @@ export default function BlogListPage() {
     <>
       <SEO
         title="Blog"
-        description="Blog Matamata — edukasi seputar monitoring perangkat, privasi digital, dan penggunaan layanan yang bertanggung jawab."
+        description="Blog MATAMATA — edukasi seputar monitoring perangkat, privasi digital, dan penggunaan layanan yang bertanggung jawab."
         path="/blog"
       />
       <section className="pt-28 md:pt-36 pb-16 md:pb-24">
@@ -27,7 +27,7 @@ export default function BlogListPage() {
 
           <div className="max-w-2xl mb-12">
             <span className="text-xs font-semibold tracking-wider uppercase text-secondary-600 dark:text-secondary-400">
-              Blog Matamata
+              Blog MATAMATA
             </span>
             <h1 className="mt-3 text-3xl md:text-4xl font-bold text-primary-900 dark:text-primary-100">
               Edukasi Monitoring Perangkat & Privasi Digital

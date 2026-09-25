@@ -28,7 +28,7 @@ export default function Hero() {
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
             <a
-              href={getWhatsAppLink('Halo Matamata, saya ingin ngobrol tentang layanan monitoring WhatsApp jarak jauh.')}
+              href={getWhatsAppLink('Halo MATAMATA, saya ingin ngobrol tentang layanan monitoring WhatsApp jarak jauh.')}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold rounded-xl bg-success-600 hover:bg-success-700 text-white transition-all hover:shadow-lg"

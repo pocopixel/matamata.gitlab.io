@@ -111,18 +111,18 @@ export default function BlogArticlePage({ slug }: { slug: string }) {
           </div>
 
           <div className="mt-12 p-6 rounded-2xl bg-primary-50 dark:bg-primary-900/20 border border-primary-100 dark:border-primary-800">
-            <h2 className="text-lg font-bold text-primary-800 dark:text-primary-200 mb-2">Butuh Konsultasi?</h2>
+            <h2 className="text-lg font-bold text-primary-800 dark:text-primary-200 mb-2">Butuh Ngobrol?</h2>
             <p className="text-sm text-warm-600 dark:text-warm-400 mb-4">
-              Punya pertanyaan tentang layanan monitoring perangkat? Hubungi tim Matamata melalui WhatsApp.
+              Punya pertanyaan tentang layanan monitoring perangkat? Hubungi tim MATAMATA melalui WhatsApp.
             </p>
             <a
-              href={getWhatsAppLink('Halo Matamata, saya ingin berkonsultasi setelah membaca artikel di blog.')}
+              href={getWhatsAppLink('Halo MATAMATA, saya ingin ngobrol setelah membaca artikel di blog.')}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-xl bg-success-600 hover:bg-success-700 text-white transition-colors"
             >
               <MessageCircle className="w-4 h-4" />
-              Konsultasi via WhatsApp
+              Ngobrol via WhatsApp
             </a>
           </div>
         </div>

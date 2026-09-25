@@ -4,7 +4,7 @@ const compatibilityData = [
   {
     os: 'Android',
     verified: true,
-    requirements: 'Versi Android yang didukung dapat berubah. Konsultasi diperlukan untuk memverifikasi kompatibilitas perangkat spesifik.',
+    requirements: 'Versi Android yang didukung dapat berubah. Ngobrol diperlukan untuk memverifikasi kompatibilitas perangkat spesifik.',
     limitations: 'Beberapa fitur memerlukan akses root untuk berfungsi penuh. Ketersediaan fitur berbeda antar versi.',
   },
   {
@@ -17,7 +17,7 @@ const compatibilityData = [
     os: 'Lainnya',
     verified: false,
     requirements: 'Dukungan untuk sistem operasi lain belum dikonfirmasi.',
-    limitations: 'Periksa informasi resmi atau konsultasi untuk perangkat non-Android/iOS.',
+    limitations: 'Periksa informasi resmi atau ngobrol untuk perangkat non-Android/iOS.',
   },
 ];
 
@@ -76,7 +76,7 @@ export default function DeviceCompatibility() {
           <div className="flex items-start gap-2">
             <AlertTriangle className="w-5 h-5 text-warning-600 dark:text-warning-400 flex-shrink-0 mt-0.5" />
             <p className="text-sm text-warm-600 dark:text-warm-400">
-              Dukungan perangkat dapat berubah sewaktu-waktu. Verifikasi terbaru melalui konsultasi sebelum memilih paket.
+              Dukungan perangkat dapat berubah sewaktu-waktu. Verifikasi terbaru melalui ngobrol sebelum memilih paket.
             </p>
           </div>
         </div>

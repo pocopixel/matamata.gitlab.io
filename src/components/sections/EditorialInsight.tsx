@@ -5,7 +5,7 @@ const insights = [
     icon: BookOpen,
     title: 'Transparansi Penggunaan Layanan',
     description:
-      'Setiap layanan monitoring memiliki parameter teknis yang perlu dipahami sebelum digunakan. Matamata berkomitmen menyampaikan informasi secara terbuka, termasuk batasan dan persyaratan yang berlaku.',
+      'Setiap layanan monitoring memiliki parameter teknis yang perlu dipahami sebelum digunakan. MATAMATA berkomitmen menyampaikan informasi secara terbuka, termasuk batasan dan persyaratan yang berlaku.',
   },
   {
     icon: KeyRound,

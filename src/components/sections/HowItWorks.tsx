@@ -3,7 +3,7 @@ import { Phone, ShieldCheck, Smartphone, Package, FileCheck, Eye } from 'lucide-
 const steps = [
   {
     icon: Phone,
-    title: 'Hubungi Matamata',
+    title: 'Hubungi MATAMATA',
     description: 'Konsultasikan kebutuhan Anda melalui WhatsApp. Tim kami akan membantu memahami tujuan dan kebutuhan monitoring perangkat Anda.',
   },
   {
@@ -42,10 +42,10 @@ export default function HowItWorks() {
             Cara Kerja
           </span>
           <h2 className="mt-3 text-3xl md:text-4xl font-bold text-warm-50">
-            Proses Konsultasi dan Penggunaan Layanan
+            Proses Ngobrol dan Penggunaan Layanan
           </h2>
           <p className="mt-4 text-warm-300">
-            Enam langkah sederhana untuk memulai konsultasi hingga penggunaan layanan monitoring perangkat secara bertanggung jawab.
+            Enam langkah sederhana untuk memulai ngobrol hingga penggunaan layanan monitoring perangkat secara bertanggung jawab.
           </p>
         </div>
 

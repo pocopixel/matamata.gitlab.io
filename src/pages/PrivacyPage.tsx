@@ -5,11 +5,11 @@ export default function PrivacyPage() {
   const sections = [
     {
       title: '1. Pendahuluan',
-      content: 'Kebijakan Privasi ini menjelaskan bagaimana Matamata mengumpulkan, menggunakan, dan melindungi informasi Anda saat menggunakan layanan konsultasi dan website kami. Dengan menggunakan layanan ini, Anda menyetujui praktik yang dijelaskan dalam kebijakan ini.',
+      content: 'Kebijakan Privasi ini menjelaskan bagaimana MATAMATA mengumpulkan, menggunakan, dan melindungi informasi Anda saat menggunakan layanan konsultasi dan website kami. Dengan menggunakan layanan ini, Anda menyetujui praktik yang dijelaskan dalam kebijakan ini.',
     },
     {
       title: '2. Data yang Dikumpulkan',
-      content: 'Matamata mengumpulkan data berikut saat Anda menggunakan layanan kami: nama, nomor WhatsApp, alamat email, informasi transaksi (jika pembayaran dilakukan), percakapan dukungan, dan informasi teknis seperti jenis perangkat dan browser yang Anda gunakan.',
+      content: 'MATAMATA mengumpulkan data berikut saat Anda menggunakan layanan kami: nama, nomor WhatsApp, alamat email, informasi transaksi (jika pembayaran dilakukan), percakapan dukungan, dan informasi teknis seperti jenis perangkat dan browser yang Anda gunakan.',
     },
     {
       title: '3. Penggunaan Data',
@@ -17,7 +17,7 @@ export default function PrivacyPage() {
     },
     {
       title: '4. Berbagi Data dengan Pihak Ketiga',
-      content: 'Matamata tidak membagikan informasi pribadi Anda kepada pihak ketiga tanpa persetujuan Anda, kecuali jika diwajibkan oleh hukum atau diperlukan untuk pemrosesan transaksi layanan dengan penyedia layanan monitoring.',
+      content: 'MATAMATA tidak membagikan informasi pribadi Anda kepada pihak ketiga tanpa persetujuan Anda, kecuali jika diwajibkan oleh hukum atau diperlukan untuk pemrosesan transaksi layanan dengan penyedia layanan monitoring.',
     },
     {
       title: '5. Penyimpanan dan Keamanan Data',
@@ -25,7 +25,7 @@ export default function PrivacyPage() {
     },
     {
       title: '6. Analytics',
-      content: 'Saat ini, analytics tidak diaktifkan pada website Matamata. Jika diaktifkan di kemudian hari, kebijakan ini akan diperbarui untuk mencerminkan data yang dikumpulkan dan bagaimana data tersebut digunakan.',
+      content: 'Saat ini, analytics tidak diaktifkan pada website MATAMATA. Jika diaktifkan di kemudian hari, kebijakan ini akan diperbarui untuk mencerminkan data yang dikumpulkan dan bagaimana data tersebut digunakan.',
     },
     {
       title: '7. Hak Anda',
@@ -33,11 +33,11 @@ export default function PrivacyPage() {
     },
     {
       title: '8. Privasi Anak-anak',
-      content: 'Layanan Matamata tidak ditujukan untuk individu di bawah usia 18 tahun. Kami tidak secara sengaja mengumpulkan informasi pribadi dari anak-anak. Jika Anda yakin kami telah mengumpulkan data dari anak-anak, hubungi kami untuk penghapusan.',
+      content: 'Layanan MATAMATA tidak ditujukan untuk individu di bawah usia 18 tahun. Kami tidak secara sengaja mengumpulkan informasi pribadi dari anak-anak. Jika Anda yakin kami telah mengumpulkan data dari anak-anak, hubungi kami untuk penghapusan.',
     },
     {
       title: '9. Perubahan Kebijakan',
-      content: 'Matamata dapat memperbarui Kebijakan Privasi ini sewaktu-waktu. Perubahan akan dipublikasikan di halaman ini dengan tanggal pembaruan. Kami menganjurkan Anda meninjau halaman ini secara berkana.',
+      content: 'MATAMATA dapat memperbarui Kebijakan Privasi ini sewaktu-waktu. Perubahan akan dipublikasikan di halaman ini dengan tanggal pembaruan. Kami menganjurkan Anda meninjau halaman ini secara berkana.',
     },
     {
       title: '10. Kontak',
@@ -50,7 +50,7 @@ export default function PrivacyPage() {
     <>
       <SEO
         title="Kebijakan Privasi"
-        description="Kebijakan privasi Matamata — bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi Anda."
+        description="Kebijakan privasi MATAMATA — bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi Anda."
         path="/kebijakan-privasi"
       />
       <section className="pt-28 md:pt-36 pb-16 md:pb-24">

@@ -5,11 +5,11 @@ export default function TermsPage() {
   const sections = [
     {
       title: '1. Penerimaan Ketentuan',
-      content: 'Dengan mengakses dan menggunakan website Matamata serta layanan konsultasi yang disediakan, Anda dianggap telah membaca, memahami, dan menyetujui seluruh ketentuan yang tercantum di halaman ini. Jika Anda tidak menyetujui sebagian atau seluruh ketentuan, mohon untuk tidak menggunakan layanan ini.',
+      content: 'Dengan mengakses dan menggunakan website MATAMATA serta layanan konsultasi yang disediakan, Anda dianggap telah membaca, memahami, dan menyetujui seluruh ketentuan yang tercantum di halaman ini. Jika Anda tidak menyetujui sebagian atau seluruh ketentuan, mohon untuk tidak menggunakan layanan ini.',
     },
     {
       title: '2. Deskripsi Layanan',
-      content: 'Matamata menyediakan layanan konsultasi dan edukasi seputar layanan monitoring perangkat berbasis FlexiSPY. Layanan mencakup informasi kompatibilitas perangkat, pemilihan paket, panduan penggunaan, serta dukungan teknis terkait. Matamata bukan pemilik, pengembang, distributor resmi, atau mitra resmi FlexiSPY.',
+      content: 'MATAMATA menyediakan layanan konsultasi dan edukasi seputar layanan monitoring perangkat berbasis MATAMATA. Layanan mencakup informasi kompatibilitas perangkat, pemilihan paket, panduan penggunaan, serta dukungan teknis terkait. MATAMATA bukan pemilik, pengembang, distributor resmi, atau mitra resmi MATAMATA.',
     },
     {
       title: '3. Penggunaan Legal dan Berizin',
@@ -33,19 +33,19 @@ export default function TermsPage() {
     },
     {
       title: '8. Ketersediaan Layanan',
-      content: 'Matamata berusaha menyediakan layanan secara berkelanjutan. Namun, ketersediaan layanan dapat dipengaruhi oleh pemeliharaan, pembaruan, atau faktor teknis lainnya. Matamata tidak menjamin layanan akan tersedia tanpa interupsi.',
+      content: 'MATAMATA berusaha menyediakan layanan secara berkelanjutan. Namun, ketersediaan layanan dapat dipengaruhi oleh pemeliharaan, pembaruan, atau faktor teknis lainnya. MATAMATA tidak menjamin layanan akan tersedia tanpa interupsi.',
     },
     {
       title: '9. Perubahan Ketentuan',
-      content: 'Matamata berhak mengubah ketentuan ini sewaktu-waktu. Perubahan akan dipublikasikan di halaman ini. Penggunaan layanan setelah perubahan dianggap sebagai persetujuan terhadap ketentuan yang diperbarui.',
+      content: 'MATAMATA berhak mengubah ketentuan ini sewaktu-waktu. Perubahan akan dipublikasikan di halaman ini. Penggunaan layanan setelah perubahan dianggap sebagai persetujuan terhadap ketentuan yang diperbarui.',
     },
     {
       title: '10. Batasan Tanggung Jawab',
-      content: 'Matamata menyediakan informasi dan konsultasi sebaik mungkin. Namun, Matamata tidak bertanggung jawab atas kerugian yang timbul dari penggunaan atau ketidakmampuan menggunakan layanan, termasuk kerugian langsung, tidak langsung, atau konsekuensial.',
+      content: 'MATAMATA menyediakan informasi dan konsultasi sebaik mungkin. Namun, MATAMATA tidak bertanggung jawab atas kerugian yang timbul dari penggunaan atau ketidakmampuan menggunakan layanan, termasuk kerugian langsung, tidak langsung, atau konsekuensial.',
     },
     {
       title: '11. Kontak',
-      content: 'Untuk pertanyaan terkait ketentuan penggunaan ini, hubungi Matamata melalui WhatsApp yang tersedia di website ini atau melalui email kontak yang tersedia.',
+      content: 'Untuk pertanyaan terkait ketentuan penggunaan ini, hubungi MATAMATA melalui WhatsApp yang tersedia di website ini atau melalui email kontak yang tersedia.',
     },
   ];
 
@@ -53,7 +53,7 @@ export default function TermsPage() {
     <>
       <SEO
         title="Ketentuan Penggunaan"
-        description="Ketentuan penggunaan layanan konsultasi dan edukasi monitoring perangkat Matamata."
+        description="Ketentuan penggunaan layanan konsultasi dan edukasi monitoring perangkat MATAMATA."
         path="/ketentuan-penggunaan"
       />
       <section className="pt-28 md:pt-36 pb-16 md:pb-24">

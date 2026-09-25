@@ -25,7 +25,7 @@ export const blogPosts: BlogPost[] = [
   slug: 'jasa-melacak-lokasi-nomor-dengan-link-tracker',
   date: '2026-09-25',
   updated: '2026-09-25',
-  author: 'Tim Matamata',
+  author: 'Tim MATAMATA',
   category: 'Pelacakan Lokasi',
   tags: [
     'jasa lacak lokasi nomor',

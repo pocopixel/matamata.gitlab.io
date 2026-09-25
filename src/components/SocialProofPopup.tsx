@@ -10,10 +10,10 @@ interface ProofEntry {
 }
 
 const demoData: ProofEntry[] = [
-  { name: 'And***', detail: '+62 812-***-**45', message: 'Konsultasi paket monitoring', time: '2 menit lalu' },
+  { name: 'And***', detail: '+62 812-***-**45', message: 'Ngobrol paket monitoring', time: '2 menit lalu' },
   { name: 'Bud***', detail: 'de***@gmail.com', message: 'Tanya kompatibilitas perangkat', time: '5 menit lalu' },
   { name: 'Cin***', detail: '+62 813-***-**89', message: 'Info paket tahunan', time: '12 menit lalu' },
-  { name: 'Dew***', detail: 'sa***@yahoo.com', message: 'Konsultasi penggunaan legal', time: '18 menit lalu' },
+  { name: 'Dew***', detail: 'sa***@yahoo.com', message: 'Ngobrol penggunaan legal', time: '18 menit lalu' },
   { name: 'Eka***', detail: '+62 821-***-**23', message: 'Tanya cara kerja layanan', time: '25 menit lalu' },
 ];
 
@@ -61,7 +61,7 @@ export default function SocialProofPopup() {
             <span className="flex items-center justify-center w-8 h-8 rounded-full bg-success-100 dark:bg-success-900/40">
               <MessageCircle className="w-4 h-4 text-success-600 dark:text-success-400" />
             </span>
-            <span className="text-xs font-semibold text-warm-800 dark:text-warm-200">Konsultasi Baru</span>
+            <span className="text-xs font-semibold text-warm-800 dark:text-warm-200">Ngobrol Baru</span>
           </div>
           <button
             onClick={() => setDismissed(true)}

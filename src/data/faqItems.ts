@@ -5,19 +5,19 @@ export interface FAQItem {
 
 export const faqItems: FAQItem[] = [
   {
-    question: 'Apa itu Matamata?',
+    question: 'Apa itu MATAMATA?',
     answer:
-      'Matamata adalah layanan konsultasi yang menyediakan informasi dan edukasi seputar layanan monitoring perangkat berbasis FlexiSPY. Kami membantu Anda memahami kemampuan, kompatibilitas, dan penggunaan layanan secara transparan.',
+      'MATAMATA adalah layanan konsultasi yang menyediakan informasi dan edukasi seputar layanan monitoring perangkat berbasis MATAMATA. Kami membantu Anda memahami kemampuan, kompatibilitas, dan penggunaan layanan secara transparan.',
   },
   {
-    question: 'Apa hubungan layanan dengan FlexiSPY?',
+    question: 'Apa hubungan layanan dengan MATAMATA?',
     answer:
-      'Matamata menyediakan konsultasi terkait layanan monitoring FlexiSPY. Matamata bukan pemilik, pengembang, distributor resmi, atau mitra resmi FlexiSPY. Informasi mengenai FlexiSPY yang kami sampaikan bersumber dari informasi yang tersedia secara umum.',
+      'MATAMATA menyediakan konsultasi terkait layanan monitoring MATAMATA. MATAMATA bukan pemilik, pengembang, distributor resmi, atau mitra resmi MATAMATA. Informasi mengenai MATAMATA yang kami sampaikan bersumber dari informasi yang tersedia secara umum.',
   },
   {
     question: 'Perangkat apa yang didukung?',
     answer:
-      'Layanan monitoring FlexiSPY umumnya mendukung perangkat Android dan iOS. Namun, ketersediaan fitur dapat berbeda berdasarkan versi sistem operasi, model perangkat, dan paket layanan. Konsultasi diperlukan untuk memverifikasi kompatibilitas perangkat spesifik Anda.',
+      'Layanan monitoring MATAMATA umumnya mendukung perangkat Android dan iOS. Namun, ketersediaan fitur dapat berbeda berdasarkan versi sistem operasi, model perangkat, dan paket layanan. Ngobrol diperlukan untuk memverifikasi kompatibilitas perangkat spesifik Anda.',
   },
   {
     question: 'Apakah penggunaan harus memiliki izin?',
@@ -27,7 +27,7 @@ export const faqItems: FAQItem[] = [
   {
     question: 'Bagaimana konsultasi dilakukan?',
     answer:
-      'Konsultasi dilakukan melalui WhatsApp. Anda dapat menghubungi kami melalui tombol konsultasi yang tersedia di berbagai halaman website ini. Tim kami akan membantu menjawab pertanyaan dan memberikan panduan yang sesuai dengan kebutuhan Anda.',
+      'Ngobrol dilakukan melalui WhatsApp. Anda dapat menghubungi kami melalui tombol ngobrol yang tersedia di berbagai halaman website ini. Tim kami akan membantu menjawab pertanyaan dan memberikan panduan yang sesuai dengan kebutuhan Anda.',
   },
   {
     question: 'Apakah semua fitur tersedia di setiap perangkat?',

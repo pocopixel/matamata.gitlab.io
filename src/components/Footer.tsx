@@ -13,7 +13,7 @@ export default function Footer() {
             <div className="mb-4">
               <img
                 src="/web-app-manifest-512x512 copy.png"
-                alt="Matamata"
+                alt="MATAMATA"
                 width="56"
                 height="56"
                 className="w-14 h-14 rounded-2xl object-cover"
@@ -23,7 +23,7 @@ export default function Footer() {
               {siteConfig.description}
             </p>
             <p className="text-xs text-warm-500 dark:text-warm-500 mt-4 max-w-xs">
-              Matamata adalah layanan konsultasi independen. Matamata bukan pemilik, pengembang, distributor resmi, atau mitra resmi FlexiSPY.
+              MATAMATA adalah layanan konsultasi independen. MATAMATA bukan pemilik, pengembang, distributor resmi, atau mitra resmi MATAMATA.
             </p>
           </div>
 
@@ -49,20 +49,20 @@ export default function Footer() {
               Butuh bantuan memilih paket atau memeriksa kompatibilitas perangkat? Hubungi kami melalui WhatsApp.
             </p>
             <a
-              href={getWhatsAppLink('Halo Matamata, saya ingin berkonsultasi.')}
+              href={getWhatsAppLink('Halo MATAMATA, saya ingin ngobrol.')}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2.5 text-sm font-semibold rounded-lg bg-success-600 hover:bg-success-700 text-white transition-colors"
             >
               <MessageCircle className="w-4 h-4" />
-              Konsultasi via WhatsApp
+              Ngobrol via WhatsApp
             </a>
           </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-warm-200 dark:border-warm-700 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-xs text-warm-500 dark:text-warm-500">
-            &copy; {new Date().getFullYear()} Matamata. Seluruh hak cipta dilindungi.
+            &copy; {new Date().getFullYear()} MATAMATA. Seluruh hak cipta dilindungi.
           </p>
           <div className="flex gap-4">
             <a

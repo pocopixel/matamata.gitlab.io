@@ -69,11 +69,11 @@ export default function Navbar() {
             href="/"
             onClick={(e) => { e.preventDefault(); navigate('/'); }}
             className="flex items-center"
-            aria-label="Beranda Matamata"
+            aria-label="Beranda MATAMATA"
           >
             <img
               src="/web-app-manifest-512x512 copy.png"
-              alt="Matamata"
+              alt="MATAMATA"
               width="44"
               height="44"
               className="w-11 h-11 rounded-xl object-cover"
@@ -108,13 +108,13 @@ export default function Navbar() {
             </button>
 
             <a
-              href={getWhatsAppLink('Halo Matamata, saya ingin berkonsultasi tentang layanan monitoring perangkat.')}
+              href={getWhatsAppLink('Halo MATAMATA, saya ingin ngobrol tentang layanan monitoring perangkat.')}
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-lg bg-success-600 hover:bg-success-700 text-white transition-colors"
             >
               <MessageCircle className="w-4 h-4" />
-              Konsultasi
+              Ngobrol
             </a>
 
             <button
@@ -166,13 +166,13 @@ export default function Navbar() {
             </ul>
             <div className="p-4 border-t border-warm-200 dark:border-warm-700">
               <a
-                href={getWhatsAppLink('Halo Matamata, saya ingin berkonsultasi tentang layanan monitoring perangkat.')}
+                href={getWhatsAppLink('Halo MATAMATA, saya ingin ngobrol tentang layanan monitoring perangkat.')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full px-4 py-3 text-sm font-semibold rounded-lg bg-success-600 hover:bg-success-700 text-white transition-colors"
               >
                 <MessageCircle className="w-4 h-4" />
-                Konsultasi via WhatsApp
+                Ngobrol via WhatsApp
               </a>
             </div>
           </div>

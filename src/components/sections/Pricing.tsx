@@ -109,7 +109,7 @@ export default function Pricing() {
               </div>
 
               <a
-                href={getWhatsAppLink(`Halo Matamata, saya tertarik dengan ${pkg.name} (${pkg.duration}). Mohon informasi lebih lanjut.`)}
+                href={getWhatsAppLink(`Halo MATAMATA, saya tertarik dengan ${pkg.name} (${pkg.duration}). Mohon informasi lebih lanjut.`)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`mt-6 flex items-center justify-center gap-2 w-full px-4 py-3 text-sm font-semibold rounded-xl transition-all ${
@@ -119,7 +119,7 @@ export default function Pricing() {
                 }`}
               >
                 <MessageCircle className="w-4 h-4" />
-                Konsultasi via WhatsApp
+                Ngobrol via WhatsApp
               </a>
             </div>
           ))}
