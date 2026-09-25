@@ -77,23 +77,36 @@ export default function SocialProofPopup() {
   useEffect(() => {
     if (!siteConfig.socialProof.enabled || dismissed) return;
 
-    const firstTimer = setTimeout(() => setVisible(true), 8000);
-    return () => clearTimeout(firstTimer);
+    let cancelled = false;
+    const timers: ReturnType<typeof setTimeout>[] = [];
+
+    const schedulePopup = () => {
+      if (cancelled) return;
+
+      setVisible(true);
+
+      // Popup pertama dan setiap popup berikutnya tampil selama 10 detik.
+      timers.push(setTimeout(() => {
+        if (cancelled) return;
+        setVisible(false);
+
+        // Setelah ditutup, beri jeda 20 detik sebelum menampilkan pertanyaan berikutnya.
+        timers.push(setTimeout(() => {
+          if (cancelled) return;
+          setIndex((previous) => getRandomIndex(previous));
+          schedulePopup();
+        }, 20000));
+      }, 10000));
+    };
+
+    // Pertahankan perilaku popup pertama: tampil setelah 8 detik.
+    timers.push(setTimeout(schedulePopup, 8000));
+
+    return () => {
+      cancelled = true;
+      timers.forEach((timer) => clearTimeout(timer));
+    };
   }, [dismissed]);
-
-  useEffect(() => {
-    if (!visible || dismissed) return;
-
-    const interval = setInterval(() => {
-      setVisible(false);
-      setTimeout(() => {
-        setIndex((previous) => getRandomIndex(previous));
-        setVisible(true);
-      }, 500);
-    }, 10000);
-
-    return () => clearInterval(interval);
-  }, [visible, dismissed]);
 
   if (dismissed || !siteConfig.socialProof.enabled) return null;
 
