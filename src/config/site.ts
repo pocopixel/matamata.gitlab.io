@@ -1,22 +1,11 @@
 export const siteConfig = {
   name: 'MATAMATA',
-  tagline: 'Jasa Pengawas Aplikasi WhatsApp Jarak Jauh',
-  description:
-    'Kenali kemampuan layanan monitoring WA Jarak Jauh, persyaratan kompatibilitas, serta penggunaannya secara transparan dan bertanggung jawab.',
+  tagline: 'Panduan Monitoring Keluarga untuk Perangkat Digital',
+  description: 'Pelajari fitur monitoring perangkat untuk WhatsApp, Facebook, Instagram, Snapchat, dan aplikasi lainnya dengan informasi kompatibilitas, harga, dan penggunaan yang transparan serta berizin.',
   url: 'PUBLIC_SITE_URL',
-  whatsapp: {
-    enabled: true,
-    number: 'ISI_NOMOR_WHATSAPP',
-  },
-  analytics: {
-    enabled: false,
-    provider: 'google-analytics',
-    measurementId: '',
-  },
-  socialProof: {
-    enabled: true,
-    demoMode: true,
-  },
+  whatsapp: { enabled: true, number: 'ISI_NOMOR_WHATSAPP' },
+  analytics: { enabled: false, provider: 'google-analytics', measurementId: '' },
+  socialProof: { enabled: true, demoMode: true },
 };
 
 export const navItems = [
@@ -32,8 +21,5 @@ export const navItems = [
 
 export function getWhatsAppLink(message?: string): string {
   const base = `https://wa.me/${siteConfig.whatsapp.number.replace(/[^0-9]/g, '')}`;
-  if (message) {
-    return `${base}?text=${encodeURIComponent(message)}`;
-  }
-  return base;
+  return message ? `${base}?text=${encodeURIComponent(message)}` : base;
 }
