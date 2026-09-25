@@ -5,47 +5,63 @@ export default function TermsPage() {
   const sections = [
     {
       title: '1. Penerimaan Ketentuan',
-      content: 'Dengan mengakses dan menggunakan website MATAMATA serta layanan konsultasi yang disediakan, Anda dianggap telah membaca, memahami, dan menyetujui seluruh ketentuan yang tercantum di halaman ini. Jika Anda tidak menyetujui sebagian atau seluruh ketentuan, mohon untuk tidak menggunakan layanan ini.',
+      content:
+        'Dengan mengakses dan menggunakan website MATAMATA serta layanan konsultasi yang kami sediakan, Anda dinyatakan telah membaca, memahami, dan menyetujui seluruh ketentuan yang tercantum dalam halaman ini. Jika Anda tidak setuju, mohon untuk tidak melanjutkan penggunaan layanan.',
     },
     {
       title: '2. Deskripsi Layanan',
-      content: 'MATAMATA menyediakan layanan konsultasi dan edukasi seputar layanan monitoring perangkat berbasis MATAMATA. Layanan mencakup informasi kompatibilitas perangkat, pemilihan paket, panduan penggunaan, serta dukungan teknis terkait. MATAMATA bukan pemilik, pengembang, distributor resmi, atau mitra resmi MATAMATA.',
+      content:
+        'MATAMATA adalah layanan konsultasi dan edukasi yang memberikan informasi seputar solusi monitoring digital untuk perangkat, termasuk pemahaman fitur terkait WhatsApp, Facebook, Instagram, Snapchat, serta aplikasi dan aktivitas digital lainnya. Layanan kami mencakup konsultasi kompatibilitas perangkat, panduan penggunaan yang sah, pilihan paket, dan penjelasan fitur sesuai kebutuhan pengguna.',
     },
     {
-      title: '3. Penggunaan Legal dan Berizin',
-      content: 'Penggunaan layanan monitoring perangkat harus dilakukan secara sah dan dengan otoritas yang berizin atas perangkat yang dimonitor. Anda bertanggung jawab untuk memastikan bahwa penggunaan layanan mematuhi seluruh hukum dan peraturan yang berlaku di wilayah yurisdiksi Anda.',
+      title: '3. Penggunaan yang Sah dan Berizin',
+      content:
+        'Semua penggunaan layanan monitoring harus dilakukan secara legal, etis, dan sesuai dengan otoritas yang sah atas perangkat yang dimonitor. Anda bertanggung jawab memastikan bahwa Anda memiliki hak atau kewenangan hukum untuk menggunakan perangkat atau aplikasi yang dibahas. Penggunaan untuk memata-matai, mengintip, atau mengakses data tanpa izin adalah dilarang keras.',
     },
     {
       title: '4. Tanggung Jawab Pengguna',
-      content: 'Anda bertanggung jawab penuh atas penggunaan layanan monitoring perangkat. Anda wajib memastikan bahwa penggunaan layanan dilakukan dengan persetujuan yang sah dari pemilik perangkat atau berdasarkan otoritas hukum yang berlaku.',
+      content:
+        'Anda bertanggung jawab penuh atas keputusan, tindakan, dan penggunaan koneksi, data, serta informasi yang Anda peroleh dari layanan kami. Anda wajib memastikan bahwa penggunaan layanan tidak melanggar hukum yang berlaku, kebijakan platform, hak privasi pihak lain, maupun ketentuan penggunaan perangkat yang bersangkutan.',
     },
     {
-      title: '5. Larangan Pemantauan Tanpa Izin',
-      content: 'Pemantauan perangkat tanpa izin atau persetujuan dari pemilik perangkat yang sah dilarang keras. Penggunaan layanan untuk memantau perangkat milik orang lain tanpa otorisasi yang sah merupakan pelanggaran terhadap ketentuan ini dan dapat melanggar hukum yang berlaku.',
+      title: '5. Larangan Penggunaan Tanpa Izin',
+      content:
+        'Pemantauan perangkat, akun, atau aktivitas digital tanpa persetujuan yang jelas dan sah dari pemilik atau pengampu legal perangkat dilarang. MATAMATA tidak menyediakan layanan untuk melakukan pengintaian, penyadapan, stalking, atau akses ilegal terhadap akun atau komunikasi pihak lain.',
     },
     {
       title: '6. Larangan Penyalahgunaan',
-      content: 'Dilarang menggunakan layanan untuk tujuan stalking, penyalahgunaan data, pencurian kredensial, distribusi malware, bypass keamanan, atau aktivasi ilegal lainnya. Pelanggaran ketentuan ini akan mengakibatkan penghentian layanan tanpa pemberitahuan sebelumnya.',
+      content:
+        'Dilarang keras menggunakan layanan untuk tujuan stalking, penyalahgunaan data, pencurian informasi, mengambil kredensial, penyebaran malware, bypass keamanan, pelanggaran hak privasi, atau aktivitas ilegal lainnya. Setiap pelanggaran dapat berujung pada penghentian layanan, pemblokiran akses, dan tindakan hukum sesuai ketentuan yang berlaku.',
     },
     {
-      title: '7. Pembayaran',
-      content: 'Jika layanan melibatkan pembayaran untuk paket monitoring, detail pembayaran akan disampaikan melalui konsultasi WhatsApp. Pembayaran dilakukan sesuai prosedur yang disepakati. Informasi mengenai refund, garansi, atau kebijakan pembayaran lainnya akan dijelaskan saat konsultasi.',
+      title: '7. Kompatibilitas, Fitur, dan Batasan Teknis',
+      content:
+        'Ketersediaan fitur monitoring dapat bervariasi berdasarkan sistem operasi, versi perangkat, konfigurasi aplikasi, model telepon, kebijakan pembaruan platform, serta paket layanan. Platform seperti WhatsApp, Facebook, Instagram, dan Snapchat memiliki pembatasan teknis yang dapat membatasi akses data, fitur, atau kebutuhan pengumpulan informasi. MATAMATA tidak menjamin seluruh fitur tersedia pada setiap perangkat atau akun.',
     },
     {
-      title: '8. Ketersediaan Layanan',
-      content: 'MATAMATA berusaha menyediakan layanan secara berkelanjutan. Namun, ketersediaan layanan dapat dipengaruhi oleh pemeliharaan, pembaruan, atau faktor teknis lainnya. MATAMATA tidak menjamin layanan akan tersedia tanpa interupsi.',
+      title: '8. Pembayaran dan Informasi Paket',
+      content:
+        'Jika layanan melibatkan pembayaran, detail paket, harga, durasi, serta prosedur pembayaran akan diinformasikan melalui konsultasi yang dilakukan secara transparan, termasuk melalui WhatsApp atau media komunikasi yang telah disepakati. Pembayaran harus dilakukan sesuai prosedur yang disampaikan oleh MATAMATA dan tidak boleh dilakukan melalui cara yang tidak resmi.',
     },
     {
-      title: '9. Perubahan Ketentuan',
-      content: 'MATAMATA berhak mengubah ketentuan ini sewaktu-waktu. Perubahan akan dipublikasikan di halaman ini. Penggunaan layanan setelah perubahan dianggap sebagai persetujuan terhadap ketentuan yang diperbarui.',
+      title: '9. Ketersediaan Layanan dan Dukungan',
+      content:
+        'MATAMATA berupaya menyediakan informasi, konsultasi, dan dukungan secara berkelanjutan. Namun, ketersediaan layanan dapat dipengaruhi oleh pemeliharaan sistem, pembaruan fitur, kondisi teknis, atau faktor di luar kendali kami. Kami tidak bertanggung jawab atas keterlambatan, perubahan, atau gangguan yang disebabkan oleh faktor eksternal.',
     },
     {
-      title: '10. Batasan Tanggung Jawab',
-      content: 'MATAMATA menyediakan informasi dan konsultasi sebaik mungkin. Namun, MATAMATA tidak bertanggung jawab atas kerugian yang timbul dari penggunaan atau ketidakmampuan menggunakan layanan, termasuk kerugian langsung, tidak langsung, atau konsekuensial.',
+      title: '10. Perubahan Ketentuan',
+      content:
+        'MATAMATA berhak memperbarui atau mengubah ketentuan ini sesuai kebutuhan operasional, aturan baru, atau perubahan layanan. Perubahan akan dipublikasikan di halaman ini dengan tanggal pembaruan. Penggunaan layanan setelah perubahan diterbitkan dianggap sebagai persetujuan Anda terhadap ketentuan yang terbaru.',
     },
     {
-      title: '11. Kontak',
-      content: 'Untuk pertanyaan terkait ketentuan penggunaan ini, hubungi MATAMATA melalui WhatsApp yang tersedia di website ini atau melalui email kontak yang tersedia.',
+      title: '11. Batasan Tanggung Jawab',
+      content:
+        'MATAMATA menyediakan informasi, edukasi, dan konsultasi dengan sebaik mungkin. Namun, kami tidak menjamin bahwa setiap informasi yang diberikan selalu akurat, lengkap, atau sesuai kondisi perangkat tertentu di setiap waktu. Kami tidak bertanggung jawab atas kerugian, kehilangan data, atau konsekuensi hukum yang timbul dari penggunaan informasi atau layanan kami.',
+    },
+    {
+      title: '12. Kontak',
+      content:
+        'Untuk pertanyaan terkait ketentuan penggunaan ini, Anda dapat menghubungi MATAMATA melalui WhatsApp yang tersedia di website ini atau melalui email kontak yang tersedia di halaman resmi kami.',
     },
   ];
 
@@ -70,7 +86,7 @@ export default function TermsPage() {
             Ketentuan Penggunaan
           </h1>
           <p className="text-sm text-warm-500 dark:text-warm-500 mb-12">
-            Terakhir diperbarui: 22 September 2026
+            Terakhir diperbarui: 25 September 2026
           </p>
 
           <div className="space-y-8">
@@ -86,3 +102,15 @@ export default function TermsPage() {
     </>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
